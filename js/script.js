@@ -44,6 +44,14 @@ createApp({
             } else {
                 this.activeSlide++
             }
+        },
+
+        prevSlide() {
+            if(this.activeSlide == 0) {
+                this.activeSlide = this.slides.length - 1
+            } else {
+                this.activeSlide--
+            }
         }
     //decrement infinite loop
   }
