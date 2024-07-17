@@ -46,13 +46,19 @@ createApp({
             }
         },
 
+        //decrement infinite loop
         prevSlide() {
             if(this.activeSlide == 0) {
                 this.activeSlide = this.slides.length - 1
             } else {
                 this.activeSlide--
             }
+        },
+
+        //
+        shiftThumb(num) {
+          this.activeSlide = num
+          console.log(num)
         }
-    //decrement infinite loop
   }
 }).mount("#app")
