@@ -36,5 +36,15 @@ createApp({
       activeSlide: 0
     }
   },
-  methods: {}
+  methods: {
+    //increment infinite loop
+        nextSlide() {
+            if(this.activeSlide == this.slides.length - 1) {
+                this.activeSlide = 0
+            } else {
+                this.activeSlide++
+            }
+        }
+    //decrement infinite loop
+  }
 }).mount("#app")
