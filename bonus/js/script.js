@@ -36,6 +36,7 @@ createApp({
       activeSlide: 0
     }
   },
+  
   methods: {
     //increment infinite loop
         nextSlide() {
@@ -55,10 +56,21 @@ createApp({
             }
         },
 
-        //
+        // BONUS 1
         shiftThumb(num) {
           this.activeSlide = num
           console.log(num)
+        },
+
+        // BONUS 2
+        autoplay() {
+          setInterval(() => {
+            this.nextSlide()
+          }, 3000)
         }
-  }
+  },
+// BONUS 2
+  created() {
+    this.autoplay()
+    }
 }).mount("#app")
