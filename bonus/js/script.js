@@ -33,7 +33,8 @@ createApp({
         },
       ],
       // active slide
-      activeSlide: 0
+      activeSlide: 0,
+      autoscroll: null
     }
   },
   
@@ -64,9 +65,13 @@ createApp({
 
         // BONUS 2
         autoplay() {
-          setInterval(() => {
+          this.autoscroll = setInterval(() => {
             this.nextSlide()
           }, 3000)
+        },
+
+        stop() {
+          clearInterval(this.autoscroll)
         }
   },
 // BONUS 2
