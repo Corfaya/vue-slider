@@ -34,7 +34,7 @@ createApp({
       ],
       // active slide
       activeSlide: 0
-    };
+    }
   },
-  methods: {},
-}).mount("#app");
+  methods: {}
+}).mount("#app")
